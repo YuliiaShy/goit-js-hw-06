@@ -26,4 +26,4 @@ const itemImages = images
 
 galleryList.insertAdjacentHTML('beforeend', itemImages);
 
-console.log(itemImages);
+

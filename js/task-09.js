@@ -9,8 +9,9 @@ const buttonEl = document.querySelector('.change-color');
 const spanColorEl = document.querySelector('.color');
 
 const onChangeColor = () => {
-  bodyEl.style.backgroundColor = getRandomHexColor();
-  spanColorEl.textContent = getRandomHexColor();
+  const randomColor = getRandomHexColor()
+  bodyEl.style.backgroundColor = randomColor;
+  spanColorEl.textContent = randomColor;
 }
 
 buttonEl.addEventListener('click', onChangeColor);
