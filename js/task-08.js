@@ -10,13 +10,16 @@ const onFormSubmit = event => {
 
   if (email.value === '' || password.value === '') {
     alert('Please fill in all the fields!');
+    return;
   };
 
-  if (email.value !== '' && password.value !== '') {
-    console.log(`Email: ${email.value}, Password: ${password.value}`);
-    event.currentTarget.reset();
-  }
+const formData = new FormData(event.currentTarget);
+  formData.forEach((value, name) => {
+ console.log(`${name}, ${value}`);
+  });
   
+  
+  loginForm.reset();
 };
 
 loginForm.addEventListener('submit', onFormSubmit);
